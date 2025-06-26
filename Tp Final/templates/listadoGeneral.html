@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Listado de Notas</title>
+</head>
+<body>
+    <h2>Listado de Notas</h2>
+
+    <p>Orden actual: <strong>{{ orden }}</strong></p>
+
+    <a href="/notas?orden=burbuja">Ordenar por Promedio (Burbuja)</a> |
+    <a href="/notas?orden=seleccion">Ordenar por Promedio (Selección)</a> |
+    <a href="/notas">Sin Orden</a>
+
+    <table border="1">
+        <tr>
+            <th>Nombre</th>
+            <th>Materia</th>
+            <th>Nota 1</th>
+            <th>Nota 2</th>
+            <th>Nota 3</th>
+            <th>Promedio</th>
+        </tr>
+        {% for fila in alumnos %}
+        <tr>
+            {% for dato in fila %}
+            <td>{{ dato }}</td>
+            {% endfor %}
+        </tr>
+        {% endfor %}
+    </table>
+</body>
+</html>
