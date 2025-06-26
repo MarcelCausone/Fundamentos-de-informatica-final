@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <title>Informe 4 - Aprobados y Desaprobados</title>
+</head>
+<body>
+    <h2>Cantidad de Aprobados y Desaprobados por Materia</h2>
+    <table border="1">
+        <tr>
+            <th>Materia</th>
+            <th>Aprobados</th>
+            <th>Desaprobados</th>
+        </tr>
+        {% for materia, valores in resultado.items() %}
+        <tr>
+            <td>{{ materia }}</td>
+            <td>{{ valores['Aprobado'] }}</td>
+            <td>{{ valores['Desaprobado'] }}</td>
+        </tr>
+        {% endfor %}
+    </table>
+    <br>
+    <a href="/">Volver al inicio</a>
+</body>
+</html>

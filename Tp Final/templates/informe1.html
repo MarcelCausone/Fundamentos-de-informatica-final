@@ -1,0 +1,17 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+</head>
+<body>
+    
+    <h2>Promedio de materias</h2>
+
+    <ul>
+        {% for materia, promedio in resultado.items() %}
+            <li><strong>{{materia}} : {{promedio}}</li>
+        {% endfor %}
+    </ul>
+
+</body>
+</html>
